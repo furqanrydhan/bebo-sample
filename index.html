@@ -3,7 +3,10 @@
     <meta name="viewport" content= "width=device-width, initial-scale=1">
     <meta name="theme-color" content="#B71C1C">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src='https://code.jquery.com/jquery-3.1.0.slim.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js'></script>
+    <script src="app.js"></script>
   </head>
   <body>
    
@@ -35,14 +38,14 @@
    <div id="activityform">
    <div id="formHolder">  
     <form action="" id="newActivity">
-      <header><h2>Post a New Activity</h2></header>
+      <header><h2>Post a New Link</h2></header>
       <div>   <label class="desc" id="title1" for="Field1">Title: </label>
       <div>   <input id="activityTitle" name="Field1" type="text" value="" tabindex="1">
       </div>
       </div>
       
-      <div>   <label class="desc" id="description1" for="Field2">Description: </label>
-      <div>   <textarea id="activityDescription" name="Field2" spellcheck="true" rows="9" col="50" tabindex="2"></textarea>
+      <div>   <label class="desc" id="description1" for="Field2">Link: </label>
+      <div>   <input id="activityDescription" name="Field2"></input>
       </div>
       </div>
 
@@ -56,9 +59,9 @@
       <div class="feed-item blog">
           <div class="icon-holder"><div class="icon"></div></div>
           <div class="text-holder col-3-5">
-            <div class="feed-title">Blog Item</div>
-            <div class="feed-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia natus obcaecati consequuntur quis molestias! Minima impedit ad omnis. Libero quibusdam facere dignissimos ut mollitia unde sunt nobis quia, nam quasi!
-            </div>
+            <a href="{{{url}}}">
+              <div class="feed-title">{{{title}}}</div>
+            </a>
           </div><!--End of Text Holder-->
         </div><!--End of Feed Item-->
     </script>
