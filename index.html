@@ -1,6 +1,22 @@
 <html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+  </head>
   <body style="background-color:white;">
     <div id="main">Furqan's Test</div>
-    <p><button data-tooltip="I’m the tooltip text.">I’m a button with a tooltip</button></p>
+    <p><button id="button" data-tooltip="I’m the tooltip text.">I’m a button with a tooltip</button></p>
+    
+    <p><button id="button2" data-tooltip="I’m the tooltip text.">I'm button 2</button></p>
+    
+    
   </body>
+  <script>
+    $("#button").on('click', function(){
+      $(body).css("background-color", "green");
+    });
+    
+    $("#button2").on('click', function(){
+      $(body).css("background-color", "blue");
+    });
+  </script>
 </html>
